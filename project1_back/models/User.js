@@ -8,25 +8,6 @@ const userSchema = mongoose.Schema({
     email: {
         type: String, 
         trim: true, 
-    },
-    password: {
-        type: String,
-        minlength: 5
-    },
-    lastname: {
-        type: String, 
-        maxlength: 20
-    },
-    role: {
-        type: Number, 
-        default: 0
-    },
-    image: String,
-    token: {
-        type: String
-    },
-    tokenExp: {
-        type: Number
     }
 })
 
