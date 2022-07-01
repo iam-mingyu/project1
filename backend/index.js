@@ -5,11 +5,12 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const {User} = require("./models/User")
 const cors = require('cors')
+const config = require('./config/key')
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json())
 
-mongoose.connect('mongodb+srv://admin:admin01!@project1.cctsx.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect(config.mongoURI)
   .then(() => console.log('MongoDb connected...'))
   .catch(err => console.log(err))
 
